@@ -1,0 +1,56 @@
+
+        <div class="row row-content">       
+        <div class="container">     
+
+  <!--      <div class="row"> -->
+    <!-- MAIN CONTENT -->
+			    <div id="main_content_wrap" class="outer">
+			      <section id="main_content" class="inner center">
+			       
+			          <h3 class="center">QR code Reader</h3>
+
+			          <div  class="center" id="reader" style="width:600px;height:450px;"></div>
+
+			          <h6 class="center">Result</h6>
+			          <span id="read" class="center"></span>
+			          <br>			          
+                      <!--
+			          <h6 class="center">Read Error (Debug only)</h6>
+			          <span class="center">Will constantly show a message, can be ignored</span>
+			          <span id="read_error" class="center"></span>
+                      
+			          <br>
+			          <h6 class="center">Video Error</h6>
+			          <span id="vid_error" class="center"></span>
+			          -->
+			          <button type="button" class="btn btn-success" ng-click="switch()">Inserisci codice</button>
+			      </section>
+
+			      <section id="Insert_manually" class="inner center">
+			          <form class="form-horizontal" name="insertNameForm" ng-submit="sendName()" style="width:600px;height:450px;" novalidate>
+
+			           	 <h1 class="center">Inserimento Manuale</h1>
+			             <div class="form-group">
+			                <h1>
+	  							<label class="lable" for="shortId">Short Id:</label>
+	  							<input type="text" class="form-control input-lg" id="shortId" name="shortId" ng-model="sendName.shortId" required>
+  							</h1>
+						</div>
+
+	                    <div class="form-group">
+	                            <button type="submit" class="btn btn-primary">Applica</button>
+	                    </div>
+
+			          </form>
+
+			          <h6 class="center">Result</h6>
+			          <span id="read" class="center"></span>
+			          <br>	
+
+			          <button type="button" class="btn btn-success" ng-click="switch()">Inserisci codice</button>
+			      <section>
+
+			    </div>
+        <!--    </div> -->
+            </div>
+        </div>

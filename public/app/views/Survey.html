@@ -1,0 +1,35 @@
+
+        <div class="row row-content">
+            <div class="col-xs-12">        
+                <h1>Benvenuto -  {{Res.firstname}}</h1>
+
+               <form class="form-horizontal" name="feedbackForm" ng-submit="sendFeedback()" novalidate>
+
+                    <div class="row" ng-repeat="question in survey.questions">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4"><h1> {{question.id}}) {{question.text}}</h1>  </div>
+                            <div class="col-md-2"><br></div>
+                            <div class="col-md-1" ng-repeat="choice in question.choices">
+
+                                <label>
+                                  <input type="radio" name={{choice.numq}} value="small" ng-click="setChoiceForQuestion(question.id, choice.id)"/>
+                                  <img src={{choice.img}} class="img-responsive" alt={{choice.alt}} style="width:100px;" ng-model="choice.numq"  ng-value={{choice.value}} required>
+                                </label>                        
+                            </div>
+                    </div>
+                   
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary btn-lg">Scopri il tuo profilo</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            
+  
+
+        </div>
+    </div>
+
